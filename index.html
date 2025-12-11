@@ -7,37 +7,78 @@
     <!-- Link to your main CSS stylesheet -->
     <link href="./css/main.css" rel="stylesheet" />
 
-    <title>Document</title>
+    <title>What’s Your Cheese?</title>
 </head>
 
 <body>
 
-    <!-- Main container for the whole page background and layout -->
-    <div class="page_container">
+    <!-- =============================== -->
+    <!-- LANDING PAGE (VISIBLE AT START) -->
+    <!-- =============================== -->
+    <div id="landing_page" class="page_container">
 
-        <!-- The main title text: "What’s Your Cheese?" -->
         <span class="title_text">
             What’s 
             Your 
             Cheese?
         </span>
 
-        <!-- Start button background (rounded rectangle) -->
         <div class="start_button_bg"></div>
 
-        <!-- Start button text displayed on top of the rectangle -->
-        <span class="start_button_text">Start</span>
+        <span class="start_button_text" id="start_button">Start</span>
 
-        <!-- Border frame around the page (image with opacity + border) -->
         <div class="border_frame"></div>
-
-        <!-- Cheese image next to title (previously v12_44) -->
         <div class="title_cheese"></div>
-
-        <!-- Little rats image near the title (new image container) -->
         <div class="title_lil_shan_rats"></div>
 
     </div>
+
+
+    <!-- ============================== -->
+    <!-- QUIZ PAGE (HIDDEN AT START)   -->
+    <!-- ============================== -->
+    <div id="quiz_page" style="display:none;">
+
+        <div class="quiz_container">
+
+            <!-- OPTION 1 -->
+            <div class="quiz_option_bg" id="quiz_option1_bg"></div>
+            <span class="quiz_option_text" id="quiz_option1_text">Option 1</span>
+
+            <!-- OPTION 2 -->
+            <div class="quiz_option_bg" id="quiz_option2_bg"></div>
+            <span class="quiz_option_text" id="quiz_option2_text">Option 2</span>
+
+            <!-- OPTION 3 -->
+            <div class="quiz_option_bg" id="quiz_option3_bg"></div>
+            <span class="quiz_option_text" id="quiz_option3_text">Option 3</span>
+
+            <!-- BACKGROUND FRAME -->
+            <div class="quiz_bg_frame"></div>
+
+            <!-- SCENARIO PROMPT -->
+            <span class="quiz_prompt">
+                Scenario 1: You got scooped up by a knife 
+                and stood on a sock monkey
+            </span>
+
+            <!-- IMAGE BOX -->
+            <div class="quiz_image_box"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =============================== -->
+    <!-- SCRIPT: SWITCH PAGES ON START   -->
+    <!-- =============================== -->
+    <script>
+        document.getElementById("start_button").onclick = function() {
+            document.getElementById("landing_page").style.display = "none";
+            document.getElementById("quiz_page").style.display = "block";
+        };
+    </script>
 
 </body>
 </html>

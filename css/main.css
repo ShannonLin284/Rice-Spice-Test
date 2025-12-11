@@ -1,3 +1,6 @@
+/* ============================================================
+   GLOBAL RESET + BASE STYLES
+   ============================================================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,11 +10,15 @@
 body {
   font-size: 14px;
   background: rgba(250,240,188,1);
-  overflow-x: hidden;   /* prevents horizontal scrolling */
+  overflow-x: hidden;
   font-family: Inika, serif;
 }
 
-/* Wrap whole design and center it */
+
+/* ============================================================
+   LANDING PAGE
+   ============================================================ */
+
 .page_container {
   width: 100vw;
   height: 100vh;
@@ -19,17 +26,17 @@ body {
   overflow: hidden;
 }
 
-/* Main title text */
+/* Title text */
 .title_text {
   position: absolute;
   top: 17vh;
   left: 10vw;
-  font-size: 10vw;         /* scales with screen width */
+  font-size: 10vw;
   line-height: 0.9;
   width: 70vw;
 }
 
-/* Start button background */
+/* Start button */
 .start_button_bg {
   width: 30vw;
   height: 10vh;
@@ -41,7 +48,6 @@ body {
   border-radius: 999px;
 }
 
-/* Start button text */
 .start_button_text {
   position: absolute;
   bottom: 25vh;
@@ -52,23 +58,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none; /* so clicks go through to the bg */
+  pointer-events: auto; 
 }
 
-/* Decorative border frame */
+/* Decorative border */
 .border_frame {
   position: absolute;
-  inset: 3vw;  /* equal space on all sides */
-  
+  inset: 3vw;
   background: url("../images/squiggly_border.png")
               center / 100% 100% no-repeat;
-
-  pointer-events: none; /* allows clicks through if needed */
+  pointer-events: none;
 }
 
-
-
-/* Cheese image */
+/* Decorative images */
 .title_cheese {
   width: 20vw;
   height: 20vw;
@@ -78,7 +80,6 @@ body {
   left: 8vw;
 }
 
-/* Rats image */
 .title_lil_shan_rats {
   width: 35vw;
   height: 30vw;
@@ -86,4 +87,87 @@ body {
   position: absolute;
   top: 10vh;
   right: 8vw;
+}
+
+
+
+/* ============================================================
+   QUIZ PAGE
+   ============================================================ */
+
+.quiz_container {
+  width: 100%;
+  height: 1024px;
+  background: rgba(250,239,188,1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* Option button background */
+.quiz_option_bg {
+  width: 983px;
+  height: 77px;
+  background: rgba(160,129,95,1);
+  opacity: 0.5;
+  position: absolute;
+  left: 228px;
+  border-radius: 167px;
+}
+
+/* Option text */
+.quiz_option_text {
+  width: 689px;
+  color: #000;
+  position: absolute;
+  left: 357px;
+  font-family: Inika;
+  font-size: 35px;
+  text-align: center;
+}
+
+/* Option positions */
+#quiz_option1_bg { top: 638px; }
+#quiz_option1_text { top: 650px; }
+
+#quiz_option2_bg { top: 727px; }
+#quiz_option2_text { top: 739px; }
+
+#quiz_option3_bg { top: 816px; }
+#quiz_option3_text { top: 828px; }
+
+/* Background frame inside quiz */
+.quiz_bg_frame {
+  width: 100%;
+  height: 924px;
+  background: url("../images/v5_67.png");
+  opacity: 0.5;
+  position: absolute;
+  top: 50px;
+  left: 56px;
+  border: 25px solid rgba(160,130,95,1);
+}
+
+/* Scenario prompt */
+.quiz_prompt {
+  width: 973px;
+  color: #000;
+  position: absolute;
+  top: 488px;
+  left: 233px;
+  font-family: Inika;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* Image box */
+.quiz_image_box {
+  width: 675px;
+  height: 337px;
+  background: #000;
+  position: absolute;
+  top: 128px;
+  left: 382px;
+  overflow: hidden;
 }
