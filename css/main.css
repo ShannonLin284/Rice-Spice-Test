@@ -124,19 +124,6 @@ body {
   overflow: hidden;
 }
 
-/* Quiz background border */
-.quiz_bg_frame {
-  width: 100%;
-  height: 924px;
-  background: url("../images/v5_67.png");
-  opacity: 0.5;
-  position: absolute;
-  top: 50px;
-  left: 56px;
-  border: 25px solid rgba(160,130,95,1);
-  pointer-events: none;
-}
-
 /* Option button background */
 .quiz_option_bg {
   width: 983px;
