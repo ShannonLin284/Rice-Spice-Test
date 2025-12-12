@@ -241,3 +241,37 @@ body {
     font-size: clamp(14px, 4vw, 16px);
   }
 }
+
+/* ============================================================
+   QUIZ PAGE RESIZE SCALING
+   ============================================================ */
+
+/* The base quiz size is designed around 1440px width */
+.quiz_container {
+  transform-origin: top left;
+  transform: scale(var(--quiz-scale));
+  width: 1440px;   /* your design width */
+  height: 1024px;  /* your design height */
+}
+
+/* Dynamic scaling variable */
+:root {
+  --quiz-scale: 1;
+}
+
+/* ============================================================
+   BORDER WOBBLE ANIMATION
+   ============================================================ */
+
+@keyframes cheese_wobble {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(0.4deg) scale(1.01); }
+  50%  { transform: rotate(0deg) scale(1); }
+  75%  { transform: rotate(-0.4deg) scale(1.01); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Apply wobble to both landing + quiz borders */
+.border_frame {
+  animation: cheese_wobble 3.5s ease-in-out infinite;
+}
