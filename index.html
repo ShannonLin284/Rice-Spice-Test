@@ -3,22 +3,18 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Inika&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Inika&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
     <title>What’s Your Cheese?</title>
   </head>
 
   <body>
     <!-- =============================== -->
-    <!-- LANDING PAGE (VISIBLE AT START) -->
+    <!-- LANDING PAGE -->
     <!-- =============================== -->
     <div id="landing_page" class="page_container">
-      <span class="title_text"> What’s Your Cheese? </span>
+      <span class="title_text">What’s Your Cheese?</span>
 
-      <!-- Start Button Wrapper -->
       <div id="start_button_wrapper">
         <div class="start_button_bg"></div>
         <span class="start_button_text">Start</span>
@@ -29,114 +25,192 @@
       <div class="title_lil_shan_rats"></div>
     </div>
 
-    <!-- ============================== -->
-    <!-- QUIZ PAGE (HIDDEN AT START)   -->
-    <!-- ============================== -->
-    <div id="quiz_page_1" style="display: none">
-      <div class="quiz_centerer">
-        <div class="quiz_scale_wrapper">
-          <div class="quiz_container">
-            <!-- IMAGE BOX -->
-            <div class="quiz_image_box"></div>
+    <!-- =================================================== -->
+    <!-- QUIZ PAGES 1–10 (Your layout repeated exactly) -->
+    <!-- =================================================== -->
 
-            <!-- SCENARIO PROMPT -->
-            <div class="quiz_prompt">
-              Scenario 1: You got scooped up by a knife and stood on a sock
-              monkey
-            </div>
-            <div class="option_box">
-              <button
-                class="quiz_option"
-                data-points='{"introvert": 2, "extrovert": 0}'
-              >
-                Option 1
-              </button>
-              <button
-                class="quiz_option"
-                data-points='{"introvert": 0, "extrovert": 2}'
-              >
-                Option 2
-              </button>
-              <button
-                class="quiz_option"
-                data-points='{"introvert": 1, "extrovert": 1}'
-              >
-                Option 3
-              </button>
-            </div>
-          </div>
+    <!-- TEMPLATE (copied 10 times with only scenario changed) -->
+
+    <!-- PAGE 1 -->
+    <div id="quiz_page_1" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 1: You got scooped up by a knife and stood on a sock monkey</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
         </div>
-      </div>
+      </div></div></div>
     </div>
 
-    <div id="quiz_page_2" style="display: none">
-      <div class="quiz_centerer">
-        <div class="quiz_scale_wrapper">
-          <div class="quiz_container">
-            <!-- IMAGE BOX -->
-            <div class="quiz_image_box"></div>
+    <!-- PAGE 2 -->
+    <div id="quiz_page_2" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 2: A raccoon stole your cheese and challenged you to a dance battle</div>
 
-            <!-- SCENARIO PROMPT -->
-            <div class="quiz_prompt">
-              Scenario 2: You got scooped up by a knife and stood on a sock
-              monkey
-            </div>
-            <div class="option_box">
-              <button
-                class="quiz_option"
-                data-points='{"introvert": 2, "extrovert": 0}'
-              >
-                Option 1
-              </button>
-              <button
-                class="quiz_option"
-                data-points='{"introvert": 0, "extrovert": 2}'
-              >
-                Option 2
-              </button>
-              <button
-                class="quiz_option"
-                data-points='{"introvert": 1, "extrovert": 1}'
-              >
-                Option 3
-              </button>
-            </div>
-          </div>
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
         </div>
-      </div>
+      </div></div></div>
     </div>
 
-    <div id="quiz_page_3" style="display: none"></div>
+    <!-- PAGE 3 -->
+    <div id="quiz_page_3" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 3: You fell into a fondue pot and became the life of the party</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div id="quiz_page_4" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 4: A mouse asked you for relationship advice</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
+
+    <!-- PAGE 5 -->
+    <div id="quiz_page_5" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 5: You starred in a cheese commercial against your will</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
+
+    <!-- PAGE 6 -->
+    <div id="quiz_page_6" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 6: A wheel of parmesan told you its deepest secret</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
+
+    <!-- PAGE 7 -->
+    <div id="quiz_page_7" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 7: You entered a cheese rolling competition unprepared</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
+
+    <!-- PAGE 8 -->
+    <div id="quiz_page_8" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 8: You discovered a forbidden cheese hidden in a cave</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
+
+    <!-- PAGE 9 -->
+    <div id="quiz_page_9" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 9: A cheese cult tried to recruit you</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
+
+    <!-- PAGE 10 -->
+    <div id="quiz_page_10" style="display:none">
+      <div class="quiz_centerer"><div class="quiz_scale_wrapper"><div class="quiz_container">
+        <div class="quiz_image_box"></div>
+        <div class="quiz_prompt">Scenario 10: You became the CEO of a cheddar empire overnight</div>
+
+        <div class="option_box">
+          <button class="quiz_option" data-points='{"introvert":2,"extrovert":0}'>Option 1</button>
+          <button class="quiz_option" data-points='{"introvert":0,"extrovert":2}'>Option 2</button>
+          <button class="quiz_option" data-points='{"introvert":1,"extrovert":1}'>Option 3</button>
+        </div>
+      </div></div></div>
+    </div>
 
     <!-- =============================== -->
-    <!-- SCRIPT: SWITCH PAGES ON START   -->
+    <!-- SCRIPT -->
     <!-- =============================== -->
     <script>
       let quizScores = { introvert: 0, extrovert: 0 };
       let currentPage = 0;
 
       document.getElementById("start_button_wrapper").onclick = function () {
-        currentPage += 1;
+        currentPage = 1;
         document.getElementById("landing_page").style.display = "none";
-        document.getElementById("quiz_page_" + currentPage).style.display =
-          "block";
+        document.getElementById("quiz_page_1").style.display = "block";
       };
 
       document.querySelectorAll(".quiz_option").forEach((btn) => {
         btn.addEventListener("click", () => {
-          const scoreData = JSON.parse(btn.dataset.points);
-          for (const category in scoreData) {
-            quizScores[category] += scoreData[category];
+          const pts = JSON.parse(btn.dataset.points);
+          for (const key in pts) quizScores[key] += pts[key];
+
+          const prev = currentPage;
+          currentPage++;
+
+          document.getElementById("quiz_page_" + prev).style.display = "none";
+
+          if (currentPage <= 10) {
+            document.getElementById("quiz_page_" + currentPage).style.display =
+              "block";
+          } else {
+            alert("Quiz complete! Results: " + JSON.stringify(quizScores));
           }
-          currentPage += 1;
-          document.getElementById(
-            "quiz_page_" + (currentPage - 1)
-          ).style.display = "none";
-          document.getElementById("quiz_page_" + currentPage).style.display =
-            "block";
-          console.log("Scores:", quizScores);
         });
       });
+
+      function updateQuizScale() {
+        const designWidth = 1440;
+        const scale = window.innerWidth / designWidth;
+        document.documentElement.style.setProperty("--quiz-scale", scale);
+      }
+
+      window.addEventListener("resize", updateQuizScale);
+      window.addEventListener("load", updateQuizScale);
     </script>
   </body>
 </html>
