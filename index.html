@@ -202,15 +202,6 @@
           }
         });
       });
-
-      function updateQuizScale() {
-        const designWidth = 1440;
-        const scale = window.innerWidth / designWidth;
-        document.documentElement.style.setProperty("--quiz-scale", scale);
-      }
-
-      window.addEventListener("resize", updateQuizScale);
-      window.addEventListener("load", updateQuizScale);
     </script>
   </body>
 </html>
