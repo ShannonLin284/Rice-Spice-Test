@@ -19,21 +19,22 @@ body {
    ============================================================ */
 
 .page_container {
-  width: 100vw;
-  height: 100vh;
+  width: 1440px;
+  height: 1024px;
   position: relative;
   overflow: hidden;
 }
 
-/* Title text */
 .title_text {
   position: absolute;
-  top: 17vh;
-  left: 10vw;
-  font-size: 10vw;
-  line-height: 0.9;
-  width: 70vw;
-}
+  top: 10%;               
+  left: 50%;
+  transform: translateX(-50%);
+
+  max-width: 1000px;
+  font-size: clamp(100px, 3.5vw, 24px);
+  text-align: center;
+ }
 
 /* ============================================================
    START BUTTON
@@ -41,16 +42,15 @@ body {
 
 #start_button_wrapper {
   position: absolute;
-  bottom: 25vh;
-  right: 10vw;
-  width: 30vw;
-  height: 10vh;
-  cursor: pointer;
+  bottom: 15%;
 
-  /* ✅ wobble lives here */
+  width: 420px;
+  height: 120px;
+
+  cursor: pointer;
   animation: cheese_wobble 3s ease-in-out infinite;
-  transform-origin: center;
 }
+
 
 .start_button_bg {
   width: 100%;
@@ -86,31 +86,32 @@ body {
    LANDING PAGE DECORATION
    ============================================================ */
 
-.border_frame {
+.title_lil {
+  top: 0%;
+  left: -10%;
+  width: clamp(500px, 80vw, 1100px);
+  aspect-ratio: 1 / 1;
+  background: url("../images/lil.png") center / contain no-repeat;
   position: absolute;
-  inset: 3vw;
-  background: url("../images/squiggly_border.png") center / contain no-repeat;
+
+  z-index: 1000;
   pointer-events: none;
+  transform: translateX(-10%);
 }
 
-/* Decorative images */
-.title_cheese {
-  width: 20vw;
-  height: 20vw;
-  background: url("../images/title_cheese.png") center / cover no-repeat;
+.title_shan {
+  top: -8%;
+  left: 20%;
+  width: clamp(500px, 80vw, 1100px);
+  aspect-ratio: 1 / 1;
+  background: url("../images/shan.png") center / contain no-repeat;
   position: absolute;
-  bottom: 20vh;
-  left: 8vw;
+
+  z-index: 1000;
+  pointer-events: none;
+  transform: translateX(10%);
 }
 
-.title_lil_shan_rats {
-  width: 35vw;
-  height: 30vw;
-  background: url("../images/title_lil_shan_rats.png") center / cover no-repeat;
-  position: absolute;
-  top: 10vh;
-  right: 8vw;
-}
 
 /* ============================================================
    QUIZ PAGE
