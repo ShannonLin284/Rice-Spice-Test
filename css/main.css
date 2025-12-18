@@ -322,3 +322,40 @@ body {
     transform: rotate(0deg) scale(1);
   }
 }
+
+/* ============================================================
+   NAME PAGE
+   ============================================================ */
+
+.name_container {
+  gap: 40px;
+}
+
+.name_input {
+  font-family: "Irish Grover", cursive;
+  font-size: 24px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  border: none;
+  width: 320px;
+  text-align: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.name_input::placeholder {
+  opacity: 0.6;
+}
+
+.name_input:focus {
+  box-shadow: 0 0 0 4px rgba(200, 170, 120, 0.5);
+}
+
+.name_continue {
+  margin-top: 10px;
+  width: 260px;
+  height: 90px;
+  cursor: pointer;
+  position: relative;
+  animation: cheese_wobble 3s ease-in-out infinite;
+}
