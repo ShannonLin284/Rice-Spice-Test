@@ -63,12 +63,12 @@ body {
 .start_button_bg {
   width: 100%;
   height: 100%;
-  background: rgba(160, 129, 95, 1);
-  opacity: 0.5;
+  background: rgba(160, 129, 95, 0.5);
   border-radius: 999px;
   transition:
     background-color 0.25s ease,
     opacity 0.25s ease;
+  pointer-events: none;
 }
 
 .start_button_text {
@@ -81,12 +81,53 @@ body {
   pointer-events: none;
 }
 
+.continue_button_text {
+  position: absolute;
+  inset: 0;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
 #start_button_wrapper:hover .start_button_bg {
-  background: rgba(200, 170, 120, 1);
-  opacity: 0.8;
+  background: rgba(200, 170, 120, 0.8);
 }
 
 #start_button_wrapper:hover .start_button_text {
+  color: white;
+}
+
+#name_continue:hover .start_button_bg {
+  background: rgba(200, 170, 120, 0.8);
+}
+
+#name_continue:hover .continue_button_text {
+  color: white;
+}
+
+.result_buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.result_buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Irish Grover", cursive;
+  border-radius: 50px;
+  border: none;
+  background: rgba(160, 129, 95, 0.5);
+  color: black;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.result_buttons button:hover {
+  background: rgba(200, 170, 120, 0.8);
   color: white;
 }
 
@@ -148,11 +189,11 @@ body {
 .quiz_option {
   width: 100%;
   height: 50px;
-  background: rgba(160, 129, 95, 1);
-  opacity: 0.5;
+  background: rgba(160, 129, 95, 0.5);
   border: none;
   border-radius: 167px;
   font-family: "Didact Gothic";
+  color: rgb(127, 122, 95);
   font-size: clamp(16px, 3vw, 20px);
   cursor: pointer;
   transition:
@@ -222,6 +263,7 @@ body {
 
 .result_container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;

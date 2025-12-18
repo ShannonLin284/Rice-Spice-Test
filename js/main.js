@@ -6,7 +6,6 @@
 import { setPlayerName, logPlay } from "./firebase-backend.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-
   /* ===============================
      QUIZ STATE
   ================================ */
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const startBtn = document.getElementById("start_button_wrapper");
   const nameInput = document.getElementById("name_input");
   const nameContinue = document.getElementById("name_continue");
-  
+
   // Allow Enter key to submit name
   nameInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -125,7 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("quiz_page_" + prev).style.display = "none";
 
       if (currentPage <= 16) {
-        document.getElementById("quiz_page_" + currentPage).style.display = "block";
+        document.getElementById("quiz_page_" + currentPage).style.display =
+          "block";
       } else {
         document.getElementById("loading").style.display = "block";
 
@@ -143,5 +143,37 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
 
+const downloadButton = document.getElementById("download_button");
+const shareButton = document.getElementById("share_button");
+const resultImage = document.getElementById("result_image");
+
+downloadButton.addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href = resultImage.src;
+  link.download = "Cheese.png";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+shareButton.addEventListener("click", async () => {
+  try {
+    const response = await fetch(resultImage.src);
+    const blob = await response.blob();
+    const file = new File([blob], "Cheese.png", { type: blob.type });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        files: [file],
+        title: "What's Your Cheese?",
+        text: "Check out my cheese result!",
+      });
+    } else {
+      alert("Sharing not supported on this device. Try downloading instead!");
+    }
+  } catch (err) {
+    console.error("Share failed:", err);
+  }
 });
