@@ -98,7 +98,7 @@ body {
   left: -10%;
   width: clamp(500px, 80vw, 1100px);
   aspect-ratio: 1 / 1;
-  background: url("../images/lil.png") center / contain no-repeat;
+  background: url("../images/Lil.png") center / contain no-repeat;
   position: absolute;
 
   z-index: 1000;
@@ -111,7 +111,7 @@ body {
   left: 20%;
   width: clamp(500px, 80vw, 1100px);
   aspect-ratio: 1 / 1;
-  background: url("../images/shan.png") center / contain no-repeat;
+  background: url("../images/Shan.png") center / contain no-repeat;
   position: absolute;
 
   z-index: 1000;
@@ -129,7 +129,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("../images/squiggly_border.png") center / contain no-repeat;
+  background: url("../images/Border.png") center / contain no-repeat;
   height: 70%;
   position: relative;
   padding: 8vh 10% 10vh;
@@ -203,7 +203,7 @@ body {
 }
 
 .loading_text {
-  font-family: "Inika", serif;
+  font-family: "Irish Grover", cursive;
   font-size: 24px;
   animation: pulse 1.5s infinite;
 }
