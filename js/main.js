@@ -148,6 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const downloadButton = document.getElementById("download_button");
 const shareButton = document.getElementById("share_button");
 const resultImage = document.getElementById("result_image");
+const allCheesesButton = document.getElementById("all_cheeses_button");
+const backButton = document.getElementById("back_button");
 
 downloadButton.addEventListener("click", () => {
   const link = document.createElement("a");
@@ -176,4 +178,14 @@ shareButton.addEventListener("click", async () => {
   } catch (err) {
     console.error("Share failed:", err);
   }
+});
+
+allCheesesButton.addEventListener("click", () => {
+  document.getElementById("result").style.display = "none";
+  document.getElementById("all_cheeses").style.display = "block";
+});
+
+backButton.addEventListener("click", () => {
+  document.getElementById("all_cheeses").style.display = "none";
+  document.getElementById("result").style.display = "block";
 });
