@@ -55,7 +55,7 @@ body {
 
 .disclaimer_text {
   position: absolute;
-  top: 90%;
+  top: 87%;
   font-family: "Didact Gothic";
   text-align: center;
   font-size: clamp(14px, 3.5vw, 20px);

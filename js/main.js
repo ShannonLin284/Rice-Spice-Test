@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===============================
      QUIZ STATE
   ================================ */
+  let finalCheeseName = null; // ✅ ADDED
   let quizScores = { I: 0, E: 0, T: 0, F: 0, A: 0, G: 0, H: 0, S: 0 };
   let currentPage = 0;
 
@@ -54,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameInput = document.getElementById("name_input");
   const nameContinue = document.getElementById("name_continue_wrapper");
 
-  // Allow Enter key to submit name
   nameInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       nameContinue.click();
@@ -134,6 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("result").style.display = "block";
 
           const cheese = cheeseResult(quizScores);
+          finalCheeseName = cheese; // ✅ ADDED
+
           const img = document.getElementById("result_image");
           img.src = "images/" + cheese + ".png";
           img.alt = cheese;
@@ -145,11 +147,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* ===============================
+   RESULT BUTTONS
+=============================== */
 const downloadButton = document.getElementById("download_button");
 const shareButton = document.getElementById("share_button");
 const resultImage = document.getElementById("result_image");
 const allCheesesButton = document.getElementById("all_cheeses_button");
 const backButton = document.getElementById("back_button");
+const recipeButton = document.getElementById("recipe_button"); // ✅ ADDED
 
 downloadButton.addEventListener("click", () => {
   const link = document.createElement("a");
@@ -189,3 +195,21 @@ backButton.addEventListener("click", () => {
   document.getElementById("all_cheeses").style.display = "none";
   document.getElementById("result").style.display = "block";
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const recipeButton = document.getElementById("recipe_button");
+  const recipeImage = document.getElementById("recipe_image");
+
+  recipeButton.addEventListener("click", () => {
+    if (!finalCheeseName) {
+      alert("Your recipe is still cooking");
+      return;
+    }
+
+    recipeImage.src = `images/${finalCheeseName} Recipe.png`;
+    recipeImage.style.display = "block";
+  });
+});
+
+
+
