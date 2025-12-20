@@ -8,3 +8,5 @@ Why Cheese?
 - It's time to overcome the lactose intolerant mindset
 - I'm hungry 
 - It's yummy
+
+Inspired by [What Salt Are You?](https://whatsaltareyou.com/) <3
